@@ -1,41 +1,57 @@
-
-let totalDeGastos = 0;
-let camiseta = prompt(" 1-Camiseta Boca $30.000 \n 2-Camiseta Independiente $26.000 \n 3-Camiseta Racing $26.500 \n 4-Camiseta River $30.000 \n 5-Camiseta San Lorenzo $27.800 \n 6- Camiseta Unión $22.000 \n 0- Opción para finalizar");
-while(camiseta !== "0"){
-    switch(camiseta){
-        case "1":
-        alert("Añadiste la camiseta del Xeneize al carrito por el monto de $30.000");
-        incrementarTotalDeGastos(30000);
-        break;
-        case "2": 
-        alert("Añadiste la camiseta del Rojo al carrito por el monto de $26.000");
-        incrementarTotalDeGastos(26000);
-        break;
-        case "3":
-        alert("Añadiste la camiseta de la Academia al carrito por el monto de $26.500");
-        incrementarTotalDeGastos(26500);
-        break;
-        case "4":
-        alert("Añadiste la camiseta del Millonario al carrito por el monto de $30.000");
-        incrementarTotalDeGastos(30000);
-        break;
-        case "5":
-        alert("Añadiste la camiseta del Cuervo al carrito por el monto de $27.800");
-        incrementarTotalDeGastos(27800);
-        break;
-        case "6":
-        alert("Añadiste la camiseta del Tate al carrito por el monto de $22.000");
-        incrementarTotalDeGastos(22000);
-        break;
-        default:
-            alert ("Este número es inválido");
-            break;
-    }
-    camiseta = prompt(" 1-Camiseta Boca $30.000 \n 2-Camiseta Independiente $26.000 \n 3-Camiseta Racing $26.500 \n 4-Camiseta River $30.000 \n 5-Camiseta San Lorenzo $27.800 \n 6- Camiseta Unión $22.000 \n 0- Opción para finalizar");
+let numero1, numero2;
+function capturarEntradas() {
+numero1 = parseFloat(prompt("Ingrese la camiseta que desea comprar"));
+numero2 = parseFloat(prompt("Ingrese una nueva camiseta que desea comprar"));
+}
+function suma(a, b) {
+return a + b;
+}
+function resta(a, b) {
+return a - b;
+}
+const miArray = [10, 5, 8, 15, 20];
+function buscarEnArray(valor) {
+return miArray.includes(valor);
+}
+function filtrarArray(min, max) {
+return miArray.filter((numero) => numero >= min && numero <= max);
+}
+function mostrarResultadoAlert(resultado) {
+alert("El resultado es: " + resultado);
+}
+function mostrarResultadoConsole(resultado) {
+console.log("El resultado es:", resultado);
 }
 
-alert ("El total de gastos de tu compra es de $" +totalDeGastos);
-function incrementarTotalDeGastos(costocamiseta){
-    totalDeGastos = totalDeGastos + costocamiseta;
-    console.log ("El monto total es de $"+totalDeGastos);
+capturarEntradas();
+
+const opcion = parseInt(prompt("Elija una opción:\n1. Suma\n2. Resta\n3. Búsqueda en el array\n4. Filtrado del array"));
+
+switch (opcion) {
+case 1:
+    const resultadoSuma = suma(numero1, numero2);
+    mostrarResultadoAlert(resultadoSuma);
+    mostrarResultadoConsole(resultadoSuma);
+    break;
+case 2:
+    const resultadoResta = resta(numero1, numero2);
+    mostrarResultadoAlert(resultadoResta);
+    mostrarResultadoConsole(resultadoResta);
+    break;
+case 3:
+    const valorBuscado = parseFloat(prompt("Ingrese el valor que desea buscar en el array:"));
+    const resultadoBusqueda = buscarEnArray(valorBuscado);
+    mostrarResultadoAlert(resultadoBusqueda);
+    mostrarResultadoConsole(resultadoBusqueda);
+    break;
+case 4:
+    const minimo = parseFloat(prompt("Ingrese el valor mínimo para el filtrado del array:"));
+    const maximo = parseFloat(prompt("Ingrese el valor máximo para el filtrado del array:"));
+    const resultadoFiltrado = filtrarArray(minimo, maximo);
+    mostrarResultadoAlert(resultadoFiltrado);
+    mostrarResultadoConsole(resultadoFiltrado);
+    break;
+default:
+    alert("Opción inválida.");
+    break;
 }
