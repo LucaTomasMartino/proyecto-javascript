@@ -1,7 +1,7 @@
 let numero1, numero2;
 function capturarEntradas() {
-numero1 = parseFloat(prompt("Ingrese la camiseta que desea comprar"));
-numero2 = parseFloat(prompt("Ingrese una nueva camiseta que desea comprar"));
+numero1 = parseFloat(prompt("Ingrese el primer número:"));
+numero2 = parseFloat(prompt("Ingrese el segundo número:"));
 }
 function suma(a, b) {
 return a + b;
