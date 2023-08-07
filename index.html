@@ -25,29 +25,21 @@
                         <a href="index.html">
                         <button class="boton-categoria">
                             <i class="bi bi-hand-index-fill"></i>
-                            Todas las camisetas
+                            Camisetas
                         </button>
                     </a>
-                    </li>
-                    <li>
-                        <a href="./carritocamisetas.html">
-                            <i class="bi bi-cart-fill"></i>
-                            Carrito 
-                            <span class="numero-carro">
-                            </span>
-                        </a>
                     </li>
                 </ul>
             </nav>
         </div>
-    <h2 class="titulo-principal">Todos los productos - Casacas Online</h2>
     <div id="contenedor-camisetas" class="contenedor-camisetas">
         <div class="camiseta">
             <img src="./assets/camisetaboca.png" alt="Camiseta Boca Jrs">
             <div class="camiseta-detalles">
                 <h3 class="camiseta-titulo">Camiseta Boca Jrs</h3>
                 <p class="camiseta-precio">$30.100</p>
-                <button class="camiseta-agregar">Agregar</button>
+                <input type="number" id="cantidad-camiseta-1" min="0" max="10" value="0">
+                <button onclick="agregarAlCarrito(1)" class="camiseta-agregar">Agregar</button>
             </div>
         </div>
         <div class="camiseta">
@@ -55,7 +47,8 @@
             <div class="camiseta-detalles">
                 <h3 class="camiseta-titulo">Camiseta Independiente</h3>
                 <p class="camiseta-precio">$24.499</p>
-                <button class="camiseta-agregar">Agregar</button>
+                <input type="number" id="cantidad-camiseta-2" min="0" max="10" value="0">
+                <button onclick="agregarAlCarrito(2)" class="camiseta-agregar">Agregar</button>
             </div>
         </div>
         <div class="camiseta">
@@ -63,7 +56,8 @@
             <div class="camiseta-detalles">
                 <h3 class="camiseta-titulo">Camiseta Racing Club</h3>
                 <p class="camiseta-precio">$24.499</p>
-                <button class="camiseta-agregar">Agregar</button>
+                <input type="number" id="cantidad-camiseta-3" min="0" max="10" value="0">
+                <button onclick="agregarAlCarrito(3)" class="camiseta-agregar">Agregar</button>
             </div>
         </div>
         <div class="camiseta">
@@ -71,7 +65,8 @@
             <div class="camiseta-detalles">
                 <h3 class="camiseta-titulo">Camiseta River Plate</h3>
                 <p class="camiseta-precio">$30.100</p>
-                <button class="camiseta-agregar">Agregar</button>
+                <input type="number" id="cantidad-camiseta-4" min="0" max="10" value="0">
+                <button onclick="agregarAlCarrito(4)" class="camiseta-agregar">Agregar</button>
             </div>
         </div>
         <div class="camiseta">
@@ -79,7 +74,8 @@
             <div class="camiseta-detalles">
                 <h3 class="camiseta-titulo">Camiseta San Lorenzo</h3>
                 <p class="camiseta-precio">$26.999</p>
-                <button class="camiseta-agregar">Agregar</button>
+                <input type="number" id="cantidad-camiseta-5" min="0" max="10" value="0">
+                <button onclick="agregarAlCarrito(5)" class="camiseta-agregar">Agregar</button>
             </div>
         </div>
         <div class="camiseta">
@@ -87,12 +83,22 @@
             <div class="camiseta-detalles">
                 <h3 class="camiseta-titulo">Camiseta Union</h3>
                 <p class="camiseta-precio">$27.100</p>
-                <button class="camiseta-agregar">Agregar</button>
+                <input type="number" id="cantidad-camiseta-6" min="0" max="10" value="0">
+                <button onclick="agregarAlCarrito(6)" class="camiseta-agregar">Agregar</button>
             </div>
         </div>
     </div>
 </main>
     <footer>
+        <div id="carrito">
+            <h2 class="h2-carrito">Carrito <i class="bi bi-cart"></i></h2>
+            <ul id="items-carrito">
+            </ul>
+            <h3 class="h3-total">Total: <span id="total-compra">$0</span></h3>
+            <div id="btn-comprar-container">
+            <button id="btn-comprar" onclick="comprar()">Comprar</button>
+            </div>
+        </div>
     </footer>
     <script src="codigo.js"></script>
 </body>

@@ -1,57 +1,56 @@
-let numero1, numero2;
-function capturarEntradas() {
-numero1 = parseFloat(prompt("Ingrese el primer número:"));
-numero2 = parseFloat(prompt("Ingrese el segundo número:"));
+const camisetas = [
+    { id: 1, precio: 30100 },
+    { id: 2, precio: 24499 },
+    { id: 3, precio: 24499 },
+    { id: 4, precio: 30100 },
+    { id: 5, precio: 26999 },
+    { id: 6, precio: 27100 },
+];
+function agregarAlCarrito(id) {
+    const cantidadInput = document.getElementById(`cantidad-camiseta-${id}`);
+    const cantidad = parseInt(cantidadInput.value);
+    if (cantidad > 0) {
+    const carrito = obtenerCarrito();
+    const camiseta = camisetas.find(item => item.id === id);
+    carrito.push({ id: camiseta.id, precio: camiseta.precio, cantidad });
+    guardarCarrito(carrito);
+    mostrarCarrito();
+    }
 }
-function suma(a, b) {
-return a + b;
+function obtenerCarrito() {
+    const carrito = localStorage.getItem('carrito');
+    return carrito ? JSON.parse(carrito) : [];
 }
-function resta(a, b) {
-return a - b;
-}
-const miArray = [10, 5, 8, 15, 20];
-function buscarEnArray(valor) {
-return miArray.includes(valor);
-}
-function filtrarArray(min, max) {
-return miArray.filter((numero) => numero >= min && numero <= max);
-}
-function mostrarResultadoAlert(resultado) {
-alert("El resultado es: " + resultado);
-}
-function mostrarResultadoConsole(resultado) {
-console.log("El resultado es:", resultado);
+function guardarCarrito(carrito) {
+    localStorage.setItem('carrito', JSON.stringify(carrito));
 }
 
-capturarEntradas();
+function mostrarCarrito() {
+    const carrito = obtenerCarrito();
+    const listaCarrito = document.getElementById('items-carrito');
+    listaCarrito.innerHTML = '';
 
-const opcion = parseInt(prompt("Elija una opción:\n1. Suma\n2. Resta\n3. Búsqueda en el array\n4. Filtrado del array"));
+    let totalCompra = 0;
 
-switch (opcion) {
-case 1:
-    const resultadoSuma = suma(numero1, numero2);
-    mostrarResultadoAlert(resultadoSuma);
-    mostrarResultadoConsole(resultadoSuma);
-    break;
-case 2:
-    const resultadoResta = resta(numero1, numero2);
-    mostrarResultadoAlert(resultadoResta);
-    mostrarResultadoConsole(resultadoResta);
-    break;
-case 3:
-    const valorBuscado = parseFloat(prompt("Ingrese el valor que desea buscar en el array:"));
-    const resultadoBusqueda = buscarEnArray(valorBuscado);
-    mostrarResultadoAlert(resultadoBusqueda);
-    mostrarResultadoConsole(resultadoBusqueda);
-    break;
-case 4:
-    const minimo = parseFloat(prompt("Ingrese el valor mínimo para el filtrado del array:"));
-    const maximo = parseFloat(prompt("Ingrese el valor máximo para el filtrado del array:"));
-    const resultadoFiltrado = filtrarArray(minimo, maximo);
-    mostrarResultadoAlert(resultadoFiltrado);
-    mostrarResultadoConsole(resultadoFiltrado);
-    break;
-default:
-    alert("Opción inválida.");
-    break;
+    carrito.forEach(item => {
+      const subtotal = item.precio * item.cantidad;
+    totalCompra += subtotal;
+
+    const listItem = document.createElement('li');
+    listItem.textContent = `${item.cantidad} x Camiseta ${item.id} - Subtotal: $${subtotal}`;
+    listaCarrito.appendChild(listItem);
+    });
+
+    const totalCompraElement = document.getElementById('total-compra');
+    totalCompraElement.textContent = `$${totalCompra}`;
+}
+mostrarCarrito();
+function comprar() {
+    alert('¡Gracias por su compra!');
+    vaciarCarrito();
+    mostrarCarrito();
+}
+function vaciarCarrito() {
+    const carrito = [];
+    guardarCarrito(carrito);
 }
