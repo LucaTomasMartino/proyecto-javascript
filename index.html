@@ -39,6 +39,14 @@
                 <h3 class="camiseta-titulo">Camiseta Boca Jrs</h3>
                 <p class="camiseta-precio">$30.100</p>
                 <input type="number" id="cantidad-camiseta-1" min="0" max="10" value="0">
+                <select id="talla-camiseta-${id}" class="talle-camiseta1">
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                </select>
                 <button onclick="agregarAlCarrito(1)" class="camiseta-agregar">Agregar</button>
             </div>
         </div>
@@ -48,6 +56,14 @@
                 <h3 class="camiseta-titulo">Camiseta Independiente</h3>
                 <p class="camiseta-precio">$24.499</p>
                 <input type="number" id="cantidad-camiseta-2" min="0" max="10" value="0">
+                <select id="talla-camiseta-${id}" >
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                </select>
                 <button onclick="agregarAlCarrito(2)" class="camiseta-agregar">Agregar</button>
             </div>
         </div>
@@ -57,6 +73,14 @@
                 <h3 class="camiseta-titulo">Camiseta Racing Club</h3>
                 <p class="camiseta-precio">$24.499</p>
                 <input type="number" id="cantidad-camiseta-3" min="0" max="10" value="0">
+                <select id="talla-camiseta-${id}">
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                </select>
                 <button onclick="agregarAlCarrito(3)" class="camiseta-agregar">Agregar</button>
             </div>
         </div>
@@ -66,6 +90,14 @@
                 <h3 class="camiseta-titulo">Camiseta River Plate</h3>
                 <p class="camiseta-precio">$30.100</p>
                 <input type="number" id="cantidad-camiseta-4" min="0" max="10" value="0">
+                <select id="talla-camiseta-${id}">
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                </select>
                 <button onclick="agregarAlCarrito(4)" class="camiseta-agregar">Agregar</button>
             </div>
         </div>
@@ -75,6 +107,14 @@
                 <h3 class="camiseta-titulo">Camiseta San Lorenzo</h3>
                 <p class="camiseta-precio">$26.999</p>
                 <input type="number" id="cantidad-camiseta-5" min="0" max="10" value="0">
+                <select id="talla-camiseta-${id}">
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                </select>
                 <button onclick="agregarAlCarrito(5)" class="camiseta-agregar">Agregar</button>
             </div>
         </div>
@@ -84,6 +124,14 @@
                 <h3 class="camiseta-titulo">Camiseta Union</h3>
                 <p class="camiseta-precio">$27.100</p>
                 <input type="number" id="cantidad-camiseta-6" min="0" max="10" value="0">
+                <select id="talla-camiseta-${id}">
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                </select>
                 <button onclick="agregarAlCarrito(6)" class="camiseta-agregar">Agregar</button>
             </div>
         </div>
@@ -96,8 +144,26 @@
             </ul>
             <h3 class="h3-total">Total: <span id="total-compra">$0</span></h3>
             <div id="btn-comprar-container">
-            <button id="btn-comprar" onclick="comprar()">Comprar</button>
+            <button id="btn-comprar" onclick="mostrarFormulario()">Comprar</button>
             </div>
+        </div>
+        <div id="formulario-compra" class="disabled">
+            <h3>Completa tus datos para finalizar la compra</h3>
+            <form id="datos-compra">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                
+                <label for="celular">Celular:</label>
+                <input type="tel" id="celular" required>
+                
+                <p>Whatsapp:</p> 
+                <input type="url" id="whatsapp" placeholder="https://wa.me/543425092207">
+                
+                <button type="button" onclick="realizarCompra()">Confirmar Compra</button>
+            </form>
         </div>
     </footer>
     <script src="codigo.js"></script>
