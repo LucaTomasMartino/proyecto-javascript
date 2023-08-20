@@ -40,6 +40,7 @@
                 <p class="camiseta-precio">$30.100</p>
                 <input type="number" id="cantidad-camiseta-1" min="0" max="10" value="0">
                 <select id="talla-camiseta-${id}" class="talle-camiseta1">
+                    <option value="-" label="Talle"></option>
                     <option value="XS">XS</option>
                     <option value="S">S</option>
                     <option value="M">M</option>
@@ -57,6 +58,7 @@
                 <p class="camiseta-precio">$24.499</p>
                 <input type="number" id="cantidad-camiseta-2" min="0" max="10" value="0">
                 <select id="talla-camiseta-${id}" >
+                    <option value="-" label="Talle"></option>
                     <option value="XS">XS</option>
                     <option value="S">S</option>
                     <option value="M">M</option>
@@ -74,6 +76,7 @@
                 <p class="camiseta-precio">$24.499</p>
                 <input type="number" id="cantidad-camiseta-3" min="0" max="10" value="0">
                 <select id="talla-camiseta-${id}">
+                    <option value="-" label="Talle"></option>
                     <option value="XS">XS</option>
                     <option value="S">S</option>
                     <option value="M">M</option>
@@ -91,6 +94,7 @@
                 <p class="camiseta-precio">$30.100</p>
                 <input type="number" id="cantidad-camiseta-4" min="0" max="10" value="0">
                 <select id="talla-camiseta-${id}">
+                    <option value="-" label="Talle"></option>
                     <option value="XS">XS</option>
                     <option value="S">S</option>
                     <option value="M">M</option>
@@ -108,6 +112,7 @@
                 <p class="camiseta-precio">$26.999</p>
                 <input type="number" id="cantidad-camiseta-5" min="0" max="10" value="0">
                 <select id="talla-camiseta-${id}">
+                    <option value="-" label="Talle"></option>
                     <option value="XS">XS</option>
                     <option value="S">S</option>
                     <option value="M">M</option>
@@ -125,7 +130,8 @@
                 <p class="camiseta-precio">$27.100</p>
                 <input type="number" id="cantidad-camiseta-6" min="0" max="10" value="0">
                 <select id="talla-camiseta-${id}">
-                    <option value="XS" label="talle">XS</option>
+                    <option value="-" label="Talle"></option>
+                    <option value="XS">XS</option>
                     <option value="S">S</option>
                     <option value="M">M</option>
                     <option value="L">L</option>
@@ -144,7 +150,7 @@
             </ul>
             <h3 class="h3-total">Total: <span id="total-compra">$0</span></h3>
             <div id="btn-comprar-container">
-            <button id="btn-comprar" onclick="mostrarFormulario()">Comprar</button>
+                <button id="btn-comprar" onclick="mostrarFormulario()">Comprar</button>
             </div>
         </div>
         <div id="formulario-compra" class="disabled">

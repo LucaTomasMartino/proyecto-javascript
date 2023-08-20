@@ -73,9 +73,7 @@ function realizarCompra() {
     const carritoContainer = document.getElementById('carrito');
     
     formulario.classList.add('disabled');
-    carritoContainer.classList.remove('disabled');
-    
-
+    carritoContainer.classList.remove('disabled'); 
 }
 function vaciarCarrito() {
     const carrito = [];
