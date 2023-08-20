@@ -60,27 +60,22 @@ function mostrarFormulario() {
 }
 
 function realizarCompra() {
-    // Obtener los valores del formulario
     const nombre = document.getElementById('nombre').value;
     const email = document.getElementById('email').value;
     const celular = document.getElementById('celular').value;
     
-    // Aquí puedes realizar acciones con los datos, como enviarlos a un servidor, etc.
-    // Por ahora, solo mostraremos un mensaje de éxito
-    alert(`Gracias por tu compra, ${nombre}! Te contactaremos por email: ${email} y celular: ${celular}.`);
+    alert(`¡Gracias por tu compra, ${nombre}! Te contactaremos por email: ${email} y celular: ${celular} 🎉`);
     
-    // Limpiar el carrito y mostrarlo nuevamente
     vaciarCarrito();
     mostrarCarrito();
     
-    // Ocultar el formulario y mostrar el carrito nuevamente
     const formulario = document.getElementById('formulario-compra');
     const carritoContainer = document.getElementById('carrito');
     
     formulario.classList.add('disabled');
     carritoContainer.classList.remove('disabled');
     
-    // También podrías redireccionar a otra página o realizar más acciones según tus necesidades
+
 }
 function vaciarCarrito() {
     const carrito = [];
