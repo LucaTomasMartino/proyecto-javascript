@@ -64,11 +64,10 @@ function realizarCompra() {
     const nombre = document.getElementById('nombre').value;
     const email = document.getElementById('email').value;
     const celular = document.getElementById('celular').value;
-    const whatsapp = document.getElementById('whatsapp').value;
     
     // Aquí puedes realizar acciones con los datos, como enviarlos a un servidor, etc.
     // Por ahora, solo mostraremos un mensaje de éxito
-    alert(`Gracias por tu compra, ${nombre}! Te contactaremos por email: ${email} y celular: ${celular}. Enlace a WhatsApp: ${whatsapp}`);
+    alert(`Gracias por tu compra, ${nombre}! Te contactaremos por email: ${email} y celular: ${celular}.`);
     
     // Limpiar el carrito y mostrarlo nuevamente
     vaciarCarrito();

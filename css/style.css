@@ -123,6 +123,34 @@ footer{
 .disabled{
   display: none;
 }
+#formulario-compra{
+  background-color: #000;
+  color: #FFFF;
+}
+.h3-formulario{
+  position: relative;
+  text-align: center;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+}
+.boton-confirmar{
+  border: 0;
+  background-color: #FFFF;
+  color: #000;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  border-radius: 2rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  border: 2px solid #FFFF;
+  margin-top: 20px; 
+  justify-content: center;
+  align-items: center;
+}
+.boton-confirmar:hover{
+  background-color: #000;
+  color: #FFFF;
+}
 @media (max-width: 806px){
   h1{
     font-size: 45px;

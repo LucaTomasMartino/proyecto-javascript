@@ -148,21 +148,26 @@
             </div>
         </div>
         <div id="formulario-compra" class="disabled">
-            <h3>Completa tus datos para finalizar la compra</h3>
+            <h3 class="h3-formulario">Completa tus datos para finalizar la compra 😃</h3>
+            <ul class="lista-formulario">
             <form id="datos-compra">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" required>
-                
-                <label for="celular">Celular:</label>
-                <input type="tel" id="celular" required>
-                
-                <p>Whatsapp:</p> 
-                <input type="url" id="whatsapp" placeholder="https://wa.me/543425092207">
-                
-                <button type="button" onclick="realizarCompra()">Confirmar Compra</button>
+                <li>
+                    <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" required>
+                </li>
+                <li>
+                    <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                </li>
+                <li>
+                    <label for="celular">Celular:</label>
+                        <input type="tel" id="celular" required>
+                </li>
+                <li>
+                        <p>¡Contáctame en WhatsApp haciendo click <a href="https://api.whatsapp.com/send?phone=543425092207">aquí</a>!</p> 
+                </li>
+            </ul>
+                <button type="button" onclick="realizarCompra()" class="boton-confirmar">Confirmar Compra</button>
             </form>
         </div>
     </footer>
