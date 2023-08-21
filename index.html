@@ -38,9 +38,10 @@
             <div class="camiseta-detalles">
                 <h3 class="camiseta-titulo">Boca Jrs</h3>
                 <p class="camiseta-precio">$30.100</p>
+                <label for="cantidad-camiseta-1">Cantidad:</label>
                 <input type="number" id="cantidad-camiseta-1" min="0" max="10" value="0">
+                <label for="talle-camiseta">Talle:</label>
                 <select id="talla-camiseta-${id}" class="talle-camiseta1">
-                    <option value="-" label="Talle"></option>
                     <option value="XS">XS</option>
                     <option value="S">S</option>
                     <option value="M">M</option>
@@ -56,9 +57,10 @@
             <div class="camiseta-detalles">
                 <h3 class="camiseta-titulo">Independiente</h3>
                 <p class="camiseta-precio">$24.499</p>
+                <label for="cantidad-camiseta-2">Cantidad:</label>
                 <input type="number" id="cantidad-camiseta-2" min="0" max="10" value="0">
+                <label for="talle-camiseta">Talle:</label>
                 <select id="talla-camiseta-${id}" >
-                    <option value="-" label="Talle"></option>
                     <option value="XS">XS</option>
                     <option value="S">S</option>
                     <option value="M">M</option>
@@ -74,9 +76,10 @@
             <div class="camiseta-detalles">
                 <h3 class="camiseta-titulo">Racing Club</h3>
                 <p class="camiseta-precio">$24.499</p>
+                <label for="cantidad-camiseta-3">Cantidad:</label>
                 <input type="number" id="cantidad-camiseta-3" min="0" max="10" value="0">
+                <label for="talle-camiseta">Talle:</label>
                 <select id="talla-camiseta-${id}">
-                    <option value="-" label="Talle"></option>
                     <option value="XS">XS</option>
                     <option value="S">S</option>
                     <option value="M">M</option>
@@ -92,9 +95,10 @@
             <div class="camiseta-detalles">
                 <h3 class="camiseta-titulo">River Plate</h3>
                 <p class="camiseta-precio">$30.100</p>
+                <label for="cantidad-camiseta-4">Cantidad:</label>
                 <input type="number" id="cantidad-camiseta-4" min="0" max="10" value="0">
+                <label for="talle-camiseta">Talle:</label>
                 <select id="talla-camiseta-${id}">
-                    <option value="-" label="Talle"></option>
                     <option value="XS">XS</option>
                     <option value="S">S</option>
                     <option value="M">M</option>
@@ -110,9 +114,10 @@
             <div class="camiseta-detalles">
                 <h3 class="camiseta-titulo">San Lorenzo</h3>
                 <p class="camiseta-precio">$26.999</p>
+                <label for="cantidad-camiseta-5">Cantidad:</label>
                 <input type="number" id="cantidad-camiseta-5" min="0" max="10" value="0">
+                <label for="talle-camiseta">Talle:</label>
                 <select id="talla-camiseta-${id}">
-                    <option value="-" label="Talle"></option>
                     <option value="XS">XS</option>
                     <option value="S">S</option>
                     <option value="M">M</option>
@@ -128,9 +133,10 @@
             <div class="camiseta-detalles">
                 <h3 class="camiseta-titulo">Union de Santa fe</h3>
                 <p class="camiseta-precio">$27.100</p>
+                <label for="cantidad-camiseta-6">Cantidad:</label>
                 <input type="number" id="cantidad-camiseta-6" min="0" max="10" value="0">
+                <label for="talle-camiseta">Talle:</label>
                 <select id="talla-camiseta-${id}">
-                    <option value="-" label="Talle"></option>
                     <option value="XS">XS</option>
                     <option value="S">S</option>
                     <option value="M">M</option>
@@ -174,6 +180,7 @@
                 </li>
             </ul>
                 <button type="button" onclick="realizarCompra()" class="boton-confirmar">Confirmar Compra</button>
+                <button type="button" id="btn-cancelar" onclick="cancelarCompra()" class="boton-cancelar">Cancelar Compra</button>
             </form>
         </div>
     </footer>

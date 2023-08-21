@@ -57,6 +57,14 @@ function mostrarFormulario() {
     
     formulario.classList.remove('disabled');
     carritoContainer.classList.add('disabled');
+
+    const nombreInput = document.getElementById('nombre');
+    const emailInput = document.getElementById('email');
+    const celularInput = document.getElementById('celular');
+    
+    nombreInput.value = '';
+    emailInput.value = '';
+    celularInput.value = '';
 }
 
 function realizarCompra() {
@@ -78,4 +86,22 @@ function realizarCompra() {
 function vaciarCarrito() {
     const carrito = [];
     guardarCarrito(carrito);
+}
+function cancelarCompra() {
+    const formulario = document.getElementById('formulario-compra');
+    const carritoContainer = document.getElementById('carrito');
+    
+    formulario.classList.add('disabled');
+    carritoContainer.classList.remove('disabled'); 
+    
+    const nombreInput = document.getElementById('nombre');
+    const emailInput = document.getElementById('email');
+    const celularInput = document.getElementById('celular');
+    
+    nombreInput.value = '';
+    emailInput.value = '';
+    celularInput.value = '';
+    
+    vaciarCarrito();
+    mostrarCarrito();
 }
